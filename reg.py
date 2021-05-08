@@ -6,6 +6,7 @@ import json
 import os
 import base64
 from cryptography.fernet import Fernet
+from plyer import notification
 
 
 def add():
@@ -304,7 +305,13 @@ def add():
         # writing the encrypted data
         with open('database/user.json', 'wb') as encrypted_file:
             encrypted_file.write(encrypted)
-
+        notification.notify(
+            title="Signed Up!!",
+            message="You have successfully signed up!",
+            app_name="WeJob",
+            app_icon="images/bell.ico",
+            timeout=10
+        )
         root.destroy()
         os.system("py login.py")
     else:
@@ -371,7 +378,7 @@ page.pack(expand=True, fill=BOTH)
 
 logo = Frame(page)
 logo.pack()
-photo = PhotoImage(file="Logo.png").subsample(3)
+photo = PhotoImage(file="images/Logo.png").subsample(3)
 Label(logo, image=photo).grid(column=0, row=0, rowspan=2)
 
 ########################################################            PERSONAL INFO                 ###########################################################

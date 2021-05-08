@@ -23,7 +23,7 @@ page = Frame(frame, height=4000, width=1600)
 page.pack(expand=True, fill=BOTH)
 logo = Frame(page)
 logo.pack()
-photo = PhotoImage(file="Logo.png").subsample(3)
+photo = PhotoImage(file="images/Logo.png").subsample(3)
 Label(logo, image=photo).grid(column=0, row=0, rowspan=2)
 Label(logo, text="WeJob", font=('Aileron Bold', 22), fg='midnight blue').grid(
     column=1, row=0, columnspan=5, padx=10)
@@ -153,7 +153,7 @@ def onsubmit():
             else:
                 master.destroy()
                 root1 = Tk()
-                file = "database/giphy.gif"
+                file = "images/giphy.gif"
 
                 info = Image.open(file)
 

@@ -5,6 +5,8 @@ import json
 import os
 import base64
 from cryptography.fernet import Fernet
+import time
+from plyer import notification
 
 
 # Clearing the cookie on start
@@ -60,6 +62,13 @@ def login():
                 for user in users:
                     position += 1
                     if(user["email"] == user_name.get() and base64.b64decode(user["password"]).decode("utf-8") == password.get()):
+                        notification.notify(
+                            title = "LOGGED IN!",
+                            message = "You have successfully logged in!",
+                            app_name = "WeJob",
+                            app_icon = "images/bell.ico",
+                            timeout = 10
+                        )
                         count += 1
                         break
             addition = {
@@ -154,7 +163,7 @@ userpass.place(x=480, y=430)
 
 logo = Frame(win)
 logo.pack()
-photo = PhotoImage(file="Logo.png").subsample(3)
+photo = PhotoImage(file="images/Logo.png").subsample(3)
 Label(logo, image=photo).grid(column=0, row=0, rowspan=2)
 Label(logo, text="WeJob", font=('Aileron Bold', 50), fg='midnight blue').grid(
     column=1, row=0, columnspan=5, padx=10)

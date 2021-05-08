@@ -132,7 +132,7 @@ imagebox = OffsetImage(arr_code, zoom=0.3)
 ab = AnnotationBbox(imagebox, (.1, .94))
 ax.add_artist(ab)
 
-img = mpimg.imread('database/linkedin.png')
+img = mpimg.imread('images/linkedin.png')
 imagebox1 = OffsetImage(img, zoom=0.3)
 ab1 = AnnotationBbox(imagebox1, (.03, .605))
 ax.add_artist(ab1)

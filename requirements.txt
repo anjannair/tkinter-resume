@@ -1,0 +1,5 @@
+plyer==2.0.0
+matplotlib==3.3.3
+tkcalendar==1.6.1
+cryptography==3.2.1
+Pillow==8.2.0
