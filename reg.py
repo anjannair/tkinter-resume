@@ -40,6 +40,16 @@ def add():
             'Error', 'Your name should only comprise of characters!')
         return
 
+    # try:
+    #     if(len(fi.split(" ") < 2)):
+    #         tkinter.messagebox.showwarning(
+    #             '', 'Your first name or last name is missing')
+    #         return
+    # except:
+    #     tkinter.messagebox.showwarning(
+    #         '', 'Your first name or last name is missing')
+    #     return
+    
     y = year.get()  # '''year'''
     m = month.get()  # '''month'''
     d = day.get()  # '''day'''
@@ -320,8 +330,8 @@ def add():
 
 def ex():
     ee = tkinter.messagebox.askyesno(
-        "Application Form", 'Are you sure you want to cancel?')
-    if ee > 0:
+        "Alert", 'Are you sure you want to cancel?')
+    if ee == True:
         root.destroy()
         return
 
@@ -367,9 +377,6 @@ root.title('Personal Information')
 root.attributes('-fullscreen', True)
 
 canvas = Canvas(root, width=1200, height=2000)
-scroll_y = Scrollbar(root, orient="vertical", command=canvas.yview)
-scroll_x = Scrollbar(root, orient="horizontal",
-                     command=canvas.xview)
 
 frame = Frame(canvas)
 page = Frame(frame, height=2200, width=1600)
@@ -592,7 +599,7 @@ canvas.create_window(0, 0, anchor='nw', window=frame)
 
 canvas.update_idletasks()
 
-canvas.configure(scrollregion=canvas.bbox('all'))
+canvas.configure()
 
 canvas.pack(fill='both', expand=True, side='left')
 

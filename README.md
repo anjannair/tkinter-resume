@@ -12,7 +12,8 @@ A tkinter project that was designed to store data of users and build resumes fro
 3) Run the famous `pip install -r requirements.txt` or ` pip3 install -r requirements.txt `
 4) Open the `fernet` folder and head to `genkey.py` and generate your Fernet key (by executing the code) and keep it a secret! Then open `encryption.py` and execute it. 
    **PS: You only have to generate the key only once!! Do not generate it again!!**
-5) You need a registered user to get started so execute `reg.py` and tadaa!!! (On a side note: Once you execute `reg.py` just execute `main.py` from next time)
+5) Create a folder in the `database` folder called `images`
+6) You need a registered user to get started so execute `reg.py` and tadaa!!! (On a side note: Once you execute `reg.py` just execute `main.py` from next time)
 
 <div align="center">
 <b>YOU ARE GOOD TO GO!!!!</b>

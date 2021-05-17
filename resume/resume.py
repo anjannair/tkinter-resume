@@ -24,7 +24,7 @@ imgpath = ''
 
 
 def choose():
-    path = askopenfilename(filetypes=[("Image File", '.png')])
+    path = askopenfilename(filetypes=[("Image File", '.png .jpg')])
     im = Image.open(path)
     global imgpath
     imgpath = path
