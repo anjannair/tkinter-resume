@@ -1,4 +1,4 @@
 plyer==2.0.0
 matplotlib==3.3.3
-cryptography==3.3.2
+cryptography==41.0.6
 Pillow==10.0.1
